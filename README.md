@@ -1,17 +1,16 @@
 # shodan
 Shodan Dorks
-
 # Basic Shodan Filters
 ### city:
-Find devices in a particular city.<br/>
+Find devices in a particular city.
 `city:"Bangalore"`
 
 ### country:
-Find devices in a particular country.<br/>
+Find devices in a particular country.
 `country:"IN"`
 
 ### geo:
-Find devices by giving geographical coordinates.<br/>
+Find devices by giving geographical coordinates.
 `geo:"56.913055,118.250862"`
 
 ### Location
@@ -19,13 +18,13 @@ Find devices by giving geographical coordinates.<br/>
 `country:ru country:de city:chicago`
 
 ### hostname:
-Find devices matching the hostname.<br/>
+Find devices matching the hostname.
 `server: "gws" hostname:"google"`
 `hostname:example.com -hostname:subdomain.example.com`
 `hostname:example.com,example.org`
 
 ### net:
-Find devices based on an IP address or /x CIDR.<br/>
+Find devices based on an IP address or /x CIDR.
 `net:210.214.0.0/16`
 
 ### Organization
@@ -36,15 +35,15 @@ Find devices based on an IP address or /x CIDR.<br/>
 `asn:ASxxxx`
 
 ### os:
-Find devices based on operating system.<br/>
+Find devices based on operating system.
 `os:"windows 7"`
 
 ### port:
-Find devices based on open ports.<br/>
+Find devices based on open ports.
 `proftpd port:21`
 
 ### before/after:
-Find devices before or after between a given time.<br/>
+Find devices before or after between a given time.
 `apache after:22/02/2009 before:14/3/2010`
 
 ### SSL/TLS Certificates
@@ -57,52 +56,52 @@ Expired certificates
 `ssl.cert.subject.cn:example.com`
 
 ### Device Type
-device:firewall
-device:router
-device:wap
-device:webcam
-device:media
-device:"broadband router"
-device:pbx
-device:printer
-device:switch
-device:storage
-device:specialized
-device:phone
-device:"voip phone"
-device:"voip adaptor"
-device:"load balancer"
-device:"print server"
-device:terminal
-device:remote
-device:telecom
-device:power
-device:proxy
-device:pda
-device:bridge
+`device:firewall`
+`device:router`
+`device:wap`
+`device:webcam`
+`device:media`
+`device:"broadband router"`
+`device:pbx`
+`device:printer`
+`device:switch`
+`device:storage`
+`device:specialized`
+`device:phone`
+`device:"voip phone"`
+`device:"voip adaptor"`
+`device:"load balancer"`
+`device:"print server"`
+`device:terminal`
+`device:remote`
+`device:telecom`
+`device:power`
+`device:proxy`
+`device:pda`
+`device:bridge`
 
 ### Operating System
-'os:"windows 7"'
-'os:"windows server 2012"'
-'os:"linux 3.x"'
+`os:"windows 7"`
+`os:"windows server 2012"`
+`os:"linux 3.x"`
 
 ### Product
-'product:apache'
-'product:nginx'
-'product:android'
-'product:chromecast'
+`product:apache`
+`product:nginx`
+`product:android`
+`product:chromecast`
 
 ### Customer Premises Equipment (CPE)
-'cpe:apple'
-'cpe:microsoft'
-'cpe:nginx'
-'cpe:cisco'
+`cpe:apple`
+`cpe:microsoft`
+`cpe:nginx`
+`cpe:cisco`
 
 ### Server
-'server: nginx'
-'server: apache'
-'server: microsoft'
-'server: cisco-ios'
+`server: nginx`
+`server: apache`
+`server: microsoft`
+`server: cisco-ios`
 
 ### ssh fingerprints
 `dc:14:de:8e:d7:c1:15:43:23:82:25:81:d2:59:e8:c0`
@@ -559,6 +558,7 @@ Apple TVs, HomePods, etc.
 ### Etherium Miners
 
 `"ETH - Total speed"`
+
 
 ### Apache Directory Listings
 
