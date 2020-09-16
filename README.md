@@ -82,27 +82,27 @@ device:pda
 device:bridge
 
 ### Operating System
-os:"windows 7"
-os:"windows server 2012"
-os:"linux 3.x"
+'os:"windows 7"'
+'os:"windows server 2012"'
+'os:"linux 3.x"'
 
 ### Product
-product:apache
-product:nginx
-product:android
-product:chromecast
+'product:apache'
+'product:nginx'
+'product:android'
+'product:chromecast'
 
 ### Customer Premises Equipment (CPE)
-cpe:apple
-cpe:microsoft
-cpe:nginx
-cpe:cisco
+'cpe:apple'
+'cpe:microsoft'
+'cpe:nginx'
+'cpe:cisco'
 
 ### Server
-server: nginx
-server: apache
-server: microsoft
-server: cisco-ios
+'server: nginx'
+'server: apache'
+'server: microsoft'
+'server: cisco-ios'
 
 ### ssh fingerprints
 `dc:14:de:8e:d7:c1:15:43:23:82:25:81:d2:59:e8:c0`
