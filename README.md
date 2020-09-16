@@ -1,5 +1,5 @@
 # shodan
-Shodan Dorks
+Shodan Dorks in Joplin .jex format
 # Basic Shodan Filters
 ### city:
 Find devices in a particular city.
