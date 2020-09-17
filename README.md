@@ -1,3 +1,6 @@
+### Shodan Dorks by twitter.com/lothos612
+Feel free to make suggestions
+
 # shodan
 Shodan Dorks in Joplin .jex format
 # Basic Shodan Filters
