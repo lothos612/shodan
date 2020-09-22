@@ -554,6 +554,9 @@ Apple TVs, HomePods, etc.
 `"Model: PYNG-HUB"`
 
 # Random Stuff
+### Calibre libraries
+`"Server: calibre" http.status:200 http.title:calibre`
+
 ### OctoPrint 3D Printer Controllers
 
 `title:"OctoPrint" -title:"Login" http.favicon.hash:1307375944`
