@@ -1,8 +1,8 @@
 ### Shodan Dorks by twitter.com/lothos612
 Feel free to make suggestions
 
-# shodan
-Shodan Dorks in Joplin .jex format
+# Shodan Dorks
+
 # Basic Shodan Filters
 ### city:
 Find devices in a particular city.
@@ -71,6 +71,7 @@ Expired certificates
 `device:storage`
 `device:specialized`
 `device:phone`
+`device:"voip"`
 `device:"voip phone"`
 `device:"voip adaptor"`
 `device:"load balancer"`
@@ -122,15 +123,25 @@ Expired certificates
 
 ### MongoDB 
 `"product:MongoDB"`
+`mongodb port:27017`
+
+### Fully open MongoDBs
+`"MongoDB Server Information { "metrics":"`
+`"Set-Cookie: mongo-express=" "200 OK"`
+
+### Kibana dashboards without authentication
+`kibana content-legth:217`
 
 ### elastic 
 `port:9200 json`
+`port:"9200" all:elastic`
 
 ### Memcached 
 `"product:Memcached"`
 
 ### CouchDB 
 `"product:CouchDB"`
+`port:"5984"+Server: "CouchDB/2.1.0"`
 
 ### PostgreSQL 
 `"port:5432 PostgreSQL"`
@@ -487,6 +498,12 @@ Example: Logitech Media Servers
 `"IPC$ all storage devices"`
 
 # Webcams
+### Generic camera search
+`title:camera`
+
+### Webcams with screenshots
+`webcam has_screenshot:true`
+
 ### D-Link webcams
 `"d-Link Internet Camera, 200 OK"`
 
