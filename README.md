@@ -318,6 +318,7 @@ Helps to find the charging status of tesla powerpack.
 
 ### CobaltStrike Servers
 `product:"cobalt strike team server"`
+`ssl.cert.serial:146473198` - default certificate serial number
 `ssl.jarm:07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1`
 
 ### Hacked routers:
