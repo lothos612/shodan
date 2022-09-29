@@ -4,52 +4,65 @@ Feel free to make suggestions
 # Shodan Dorks
 
 # Basic Shodan Filters
+
 ### city:
+
 Find devices in a particular city.
 `city:"Bangalore"`
 
 ### country:
+
 Find devices in a particular country.
 `country:"IN"`
 
 ### geo:
+
 Find devices by giving geographical coordinates.
 `geo:"56.913055,118.250862"`
 
 ### Location
+
 `country:us`
 `country:ru country:de city:chicago`
 
 ### hostname:
+
 Find devices matching the hostname.
 `server: "gws" hostname:"google"`
 `hostname:example.com -hostname:subdomain.example.com`
 `hostname:example.com,example.org`
 
 ### net:
+
 Find devices based on an IP address or /x CIDR.
 `net:210.214.0.0/16`
 
 ### Organization
+
 `org:microsoft`
 `org:"United States Department"`
 
 ### Autonomous System Number (ASN)
+
 `asn:ASxxxx`
 
 ### os:
+
 Find devices based on operating system.
 `os:"windows 7"`
 
 ### port:
+
 Find devices based on open ports.
 `proftpd port:21`
 
 ### before/after:
+
 Find devices before or after between a given time.
 `apache after:22/02/2009 before:14/3/2010`
 
 ### SSL/TLS Certificates
+
 Self signed certificates
 `ssl.cert.issuer.cn:example.com ssl.cert.subject.cn:example.com`
 
@@ -59,6 +72,7 @@ Expired certificates
 `ssl.cert.subject.cn:example.com`
 
 ### Device Type
+
 `device:firewall`
 `device:router`
 `device:wap`
@@ -85,77 +99,98 @@ Expired certificates
 `device:bridge`
 
 ### Operating System
+
 `os:"windows 7"`
 `os:"windows server 2012"`
 `os:"linux 3.x"`
 
 ### Product
+
 `product:apache`
 `product:nginx`
 `product:android`
 `product:chromecast`
 
 ### Customer Premises Equipment (CPE)
+
 `cpe:apple`
 `cpe:microsoft`
 `cpe:nginx`
 `cpe:cisco`
 
 ### Server
+
 `server: nginx`
 `server: apache`
 `server: microsoft`
 `server: cisco-ios`
 
 ### ssh fingerprints
+
 `dc:14:de:8e:d7:c1:15:43:23:82:25:81:d2:59:e8:c0`
 
 # Web
 
 ### Pulse Secure
+
 `http.html:/dana-na`
+
 ### PEM Certificates
+
 `http.title:"Index of /" http.html:".pem"`
 
 # Databases
-### MySQL 
+
+### MySQL
+
 `"product:MySQL"`
 
-### MongoDB 
+### MongoDB
+
 `"product:MongoDB"`
 `mongodb port:27017`
 
 ### Fully open MongoDBs
+
 `"MongoDB Server Information { "metrics":"`
 `"Set-Cookie: mongo-express=" "200 OK"`
 
 ### Kibana dashboards without authentication
+
 `kibana content-legth:217`
 
-### elastic 
+### elastic
+
 `port:9200 json`
 `port:"9200" all:elastic`
 
-### Memcached 
+### Memcached
+
 `"product:Memcached"`
 
-### CouchDB 
+### CouchDB
+
 `"product:CouchDB"`
 `port:"5984"+Server: "CouchDB/2.1.0"`
 
-### PostgreSQL 
+### PostgreSQL
+
 `"port:5432 PostgreSQL"`
 
-### Riak 
+### Riak
+
 `"port:8087 Riak"`
 
-### Redis 
+### Redis
+
 `"product:Redis"`
 
-### Cassandra 
+### Cassandra
+
 `"product:Cassandra"`
 
 # Industrial Control Systems
+
 ### Samsung Electronic Billboards
 
 `"Server: Prismview Player"`
@@ -165,7 +200,8 @@ Expired certificates
 `"in-tank inventory" port:10001`
 
 ### Fuel Pumps connected to internet:
-No auth required to access CLI terminal.</br>
+
+No auth required to access CLI terminal.
 `"privileged command" GET`
 
 ### Automatic License Plate Readers
@@ -181,6 +217,7 @@ No auth required to access CLI terminal.</br>
 "voter system serial" country:US
 
 ### Open ATM:
+
 May allow for ATM Access availability
 `NCR Port:"161"`
 
@@ -249,62 +286,82 @@ Secured by default, thankfully, but these 1,700+ machines still have no business
 `"log off" "select the appropriate"`
 
 ### Tesla Powerpack charging Status:
+
 Helps to find the charging status of tesla powerpack.
 `http.title:"Tesla PowerPack System" http.component:"d3" -ga3ca4f2`
 
-### XZERES Wind Turbine 
+### XZERES Wind Turbine
+
 `title:"xzeres wind"`
 
-### PIPS Automated License Plate Reader 
+### PIPS Automated License Plate Reader
+
 `"html:"PIPS Technology ALPR Processors""`
 
-### Modbus 
+### Modbus
+
 `"port:502"`
 
-### Niagara Fox 
+### Niagara Fox
+
 `"port:1911,4911 product:Niagara"`
 
-### GE-SRTP 
+### GE-SRTP
+
 `"port:18245,18246 product:"general electric""`
 
-### MELSEC-Q 
+### MELSEC-Q
+
 `"port:5006,5007 product:mitsubishi"`
 
-### CODESYS 
+### CODESYS
+
 `"port:2455 operating system"`
 
-### S7 
+### S7
+
 `"port:102"`
 
-### BACnet 
+### BACnet
+
 `"port:47808"`
 
-### HART-IP 
+### HART-IP
+
 `"port:5094 hart-ip"`
 
-### Omron FINS 
+### Omron FINS
+
 `"port:9600 response code"`
 
-### IEC 60870-5-104 
+### IEC 60870-5-104
+
 `"port:2404 asdu address"`
 
-### DNP3 
+### DNP3
+
 `"port:20000 source address"`
 
-### EtherNet/IP 
+### EtherNet/IP
+
 `"port:44818"`
 
-### PCWorx 
+### PCWorx
+
 `"port:1962 PLC"`
 
-### Crimson v3.0 
+### Crimson v3.0
+
 `"port:789 product:"Red Lion Controls"`
 
-### ProConOS 
+### ProConOS
+
 `"port:20547 PLC"`
 
 # Remote Desktop
+
 ### Unprotected VNC
+
 `"authentication disabled" port:5900,5901`
 `"authentication disabled" "RFB 003.008"`
 
@@ -314,22 +371,38 @@ Helps to find the charging status of tesla powerpack.
 
 `"\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00"`
 
-# Network Infrastructure
+# C2 Infrastructure
 
 ### CobaltStrike Servers
+
 `product:"cobalt strike team server"`
-`ssl.cert.serial:146473198` - default certificate serial number
+`product:"Cobalt Strike Beacon"`
+`ssl.cert.serial:146473198`  - default certificate serial number
 `ssl.jarm:07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1`
 
+### Brute Ratel 
+`http.html_hash:-1957161625`
+
+### Covenant
+`ssl:”Covenant” http.component:”Blazor”`
+
+### Metasploit
+`ssl:"MetasploitSelfSignedCA"`
+
+# Network Infrastructure
+
 ### Hacked routers:
-Routers which got compromised </br>
+
+Routers which got compromised
 `hacked-router-help-sos`
 
 ### Redis open instances
+
 `product:"Redis key-value store"`
 
 ### Citrix:
-Find Citrix Gateway.<br/>
+
+Find Citrix Gateway.
 `title:"citrix gateway"`
 
 ### Weave Scope Dashboards
@@ -355,6 +428,7 @@ Like the infamous phpMyAdmin but for MongoDB.
 `"X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"`
 
 ### Jenkins:
+
 Jenkins Unrestricted Dashboard
 `x-jenkins 200`
 
@@ -375,13 +449,16 @@ Jenkins Unrestricted Dashboard
 `"root@" port:23 -login -password -name -Session`
 
 ### Telnet Access:
-NO password required for telnet access. </br>
+
+NO password required for telnet access.
 `port:23 console gateway`
 
 ### Polycom video-conference system no-auth shell
+
 `"polycom command shell"`
 
 ### NPort serial-to-eth / MoCA devices without password
+
 `nport -keyin port:23`
 
 ### Android Root Bridges
@@ -418,6 +495,7 @@ Vulnerable (kind of "by design," but especially when exposed).
 `"Polycom Command Shell" -failed port:23`
 
 Example: Polycom Video Conferencing
+
 ### Bomgar Help Desk Portal
 
 `"Server: Bomgar" "200 OK"`
@@ -432,17 +510,21 @@ Example: Polycom Video Conferencing
 `HP-ILO-4 !"HP-ILO-4/2.53" !"HP-ILO-4/2.54" !"HP-ILO-4/2.55" !"HP-ILO-4/2.60" !"HP-ILO-4/2.61" !"HP-ILO-4/2.62" !"HP-iLO-4/2.70" port:1900`
 
 ### Lantronix ethernet adapter’s admin interface without password
+
 `"Press Enter for Setup Mode port:9999"`
 
 ### Wifi Passwords:
+
 Helps to find the cleartext wifi passwords in Shodan.
 `html:"def_wirelesspassword"`
 
 ### Misconfigured Wordpress Sites:
+
 The wp-config.php if accessed can give out the database credentials.
 `http.html:"* The wp-config.php creation script uses this file"`
 
 # Outlook Web Access:
+
 ### Exchange 2007
 
 `"x-owa-version" "IE=EmulateIE7" "Server: Microsoft-IIS/7.0"`
@@ -460,6 +542,7 @@ The wp-config.php if accessed can give out the database credentials.
 `"X-MS-Server-Fqdn"`
 
 # Network Attached Storage (NAS)
+
 ### SMB (Samba) File Shares
 
 Produces ~500,000 results...narrow down by adding "Documents" or "Videos", etc.
@@ -491,6 +574,7 @@ Produces ~500,000 results...narrow down by adding "Documents" or "Videos", etc.
 `"Server: Logitech Media Server" "200 OK"`
 
 Example: Logitech Media Servers
+
 ### Plex Media Servers
 
 `"X-Plex-Protocol" "200 OK" port:32400`
@@ -500,19 +584,25 @@ Example: Logitech Media Servers
 `"CherryPy/5.1.0" "/home"`
 
 ### Home router attached USB
+
 `"IPC$ all storage devices"`
 
 # Webcams
+
 ### Generic camera search
+
 `title:camera`
 
 ### Webcams with screenshots
+
 `webcam has_screenshot:true`
 
 ### D-Link webcams
+
 `"d-Link Internet Camera, 200 OK"`
 
 ### Hipcam
+
 `"Hipcam RealServer/V1.0"`
 
 ### Yawcams
@@ -528,14 +618,17 @@ Example: Logitech Media Servers
 `"Server: IP Webcam Server" "200 OK"`
 
 ### Security DVRs
+
 `html:"DVR_H264 ActiveX"`
 
 ### Surveillance Cams:
-With username:admin and password: :P</br>
+
+With username:admin and password: :P
 `NETSurveillance uc-httpd`
 `Server: uc-httpd 1.0.0`
 
 # Printers & Copiers:
+
 ### HP Printers
 
 `"Serial Number:" "Built:" "Server: HP HTTP"`
@@ -557,6 +650,7 @@ With username:admin and password: :P</br>
 `"Server: CANON HTTP Server"`
 
 # Home Devices
+
 ### Yamaha Stereos
 
 `"Server: AV_Receiver" "HTTP/1.1 406"`
@@ -576,7 +670,9 @@ Apple TVs, HomePods, etc.
 `"Model: PYNG-HUB"`
 
 # Random Stuff
+
 ### Calibre libraries
+
 `"Server: calibre" http.status:200 http.title:calibre`
 
 ### OctoPrint 3D Printer Controllers
@@ -586,7 +682,6 @@ Apple TVs, HomePods, etc.
 ### Etherium Miners
 
 `"ETH - Total speed"`
-
 
 ### Apache Directory Listings
 
