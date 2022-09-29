@@ -379,6 +379,7 @@ Helps to find the charging status of tesla powerpack.
 
 ### Brute Ratel 
 `http.html_hash:-1957161625`
+`product:"Brute Ratel C4"`
 
 ### Covenant
 `ssl:”Covenant” http.component:”Blazor”`
