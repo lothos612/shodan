@@ -145,6 +145,7 @@ Expired certificates
 ### MySQL
 
 `"product:MySQL"`
+`mysql port:"3306"`
 
 ### MongoDB
 
@@ -155,6 +156,7 @@ Expired certificates
 
 `"MongoDB Server Information { "metrics":"`
 `"Set-Cookie: mongo-express=" "200 OK"`
+`"MongoDB Server Information" port:27017 -authentication`
 
 ### Kibana dashboards without authentication
 
@@ -164,6 +166,7 @@ Expired certificates
 
 `port:9200 json`
 `port:"9200" all:elastic`
+`port:"9200" all:"elastic indices"`
 
 ### Memcached
 
@@ -378,17 +381,20 @@ Helps to find the charging status of tesla powerpack.
 
 `product:"cobalt strike team server"`
 `product:"Cobalt Strike Beacon"`
-`ssl.cert.serial:146473198`  - default certificate serial number
+`ssl.cert.serial:146473198` \- default certificate serial number
 `ssl.jarm:07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1`
 
-### Brute Ratel 
+### Brute Ratel
+
 `http.html_hash:-1957161625`
 `product:"Brute Ratel C4"`
 
 ### Covenant
+
 `ssl:”Covenant” http.component:”Blazor”`
 
 ### Metasploit
+
 `ssl:"MetasploitSelfSignedCA"`
 
 # Network Infrastructure
@@ -413,18 +419,6 @@ Command-line access inside Kubernetes pods and Docker containers, and real-time 
 
 `title:"Weave Scope" http.favicon.hash:567176827`
 
-### MongoDB
-
-Older versions were insecure by default. Very scary.
-
-`"MongoDB Server Information" port:27017 -authentication`
-
-### Mongo Express Web GUI
-
-Like the infamous phpMyAdmin but for MongoDB.
-
-`"Set-Cookie: mongo-express=" "200 OK"`
-
 ### Jenkins CI
 
 `"X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"`
@@ -445,6 +439,10 @@ Jenkins Unrestricted Dashboard
 ### Pi-hole Open DNS Servers
 
 `"dnsmasq-pi-hole" "Recursion: enabled"`
+
+### DNS Servers with recursion
+
+`"port: 53" Recursion: Enabled`
 
 ### Already Logged-In as root via Telnet
 
